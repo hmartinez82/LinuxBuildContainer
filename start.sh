@@ -40,9 +40,10 @@ cleanup() {
 }
 
 print_header() {
-  lightcyan='\033[1;36m'
-  nocolor='\033[0m'
-  echo -e "${lightcyan}$1${nocolor}"
+  #lightcyan='\033[1;36m'
+  #nocolor='\033[0m'
+  #echo -e "${lightcyan}$1${nocolor}"
+  echo $1
 }
 
 # Let the agent ignore the token env variables
