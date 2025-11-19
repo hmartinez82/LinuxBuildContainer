@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:latest
 RUN DEBIAN_FRONTEND=noninteractive apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
@@ -13,8 +13,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommend
     lsb-release \
     software-properties-common
 
-RUN DEBIAN_FRONTEND=noninteractive curl -L http://mirrors.kernel.org/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb -o libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive dpkg -i libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb
+# RUN DEBIAN_FRONTEND=noninteractive curl -L http://mirrors.kernel.org/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb -o libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb
+# RUN DEBIAN_FRONTEND=noninteractive dpkg -i libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb
 
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
